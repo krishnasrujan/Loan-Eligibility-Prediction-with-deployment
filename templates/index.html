@@ -11,44 +11,54 @@
   
 </head>
 
-<body>
+<body style="background-color:lightskyblue;">
  <div class="login">
  <center>
 	<h1>Loan Eligibility Prediction</h1>
     <br>
      <!-- Main Input For Receiving Query to our ML -->
     <form action="{{ url_for('predict')}}"method="post">
-        Applicant Income in lakhs   
+        Applicant Income(in lakhs)
         <br>
-    	<input type="text" name="Applicant Income" placeholder="Applicant Income" required="required" />
+    	<input type="text" name="Applicant Income" placeholder="" required="required" />
         <br><br>
-        Co-applicant Income in lakhs   
+        Co-applicant Income(in lakhs)
         <br>
-        <input type="text" name="Co-applicant Income" placeholder="Co-applicant Income " required="required" />
+        <input type="text" name="Co-applicant Income" placeholder="" required="required" />
 		<br><br>
-		Loan Amount in Lakhs   
+		Loan Amount(in lakhs)
 		<br>
-		<input type="text" name="Loan Amount" placeholder="Loan Amount" required="required" />
+		<input type="text" name="Loan Amount" placeholder="" required="required" />
     	<br><br>
     	Repayment Term(in months)  
     	<br> 
-    	<input type="text" name="Repayment Term" placeholder="Repayment Term" required="required" />
+    	<input type="text" name="Repayment Term" placeholder="" required="required" />
         <br><br>
         Do you have better credit history?   
         <br>
-        <input type="text" name="credit history?" placeholder="no:0   yes:1" required="required" />
+        <select name="history" id="history">
+        <option value="0">No</option>
+        <option value="1">Yes</option>
+        </select>
         <br><br>
         Are you graduated?   
         <br>
-        <input type="text" name="Are you graduated?" placeholder="no:0   yes:1" required="required" />
+		<select name="grad" id="grad">
+        <option value="0">No</option>
+        <option value="1">Yes</option>
+        </select>
 		<br><br>
 		Number of dependents  
 		<br> 
-		<input type="text" name="Number of dependents" placeholder="dependents" required="required" />
+		<input type="text" name="Number of dependents" placeholder="" required="required" />
         <br><br>
         Property Area   
         <br>
-        <input type="text" name="Property Area" placeholder="urban:3 semiurban:2 rural:1" required="required" />
+        <select name="area" id="area">
+        <option value="3">Urban</option>
+        <option value="2">Semi Urban</option>
+        <option value="1">Rural</option>
+        </select>
         <br><br>
         <button type="submit" class="btn btn-primary btn-block btn-large">Predict</button>
     </form>
