@@ -3,7 +3,7 @@ from flask import Flask, request, jsonify, render_template
 import pickle
 
 app = Flask(__name__)
-model = pickle.load(open('loan_eligibility.pkl', 'rb'))
+model = pickle.load(open('ran_model.pkl', 'rb'))
 scale = pickle.load(open('scale.pkl', 'rb'))
 
 @app.route('/')
@@ -22,17 +22,13 @@ def predict():
     term = int_features[3]
     credit_history = int_features[4]
     education = int_features[5]
-    total_income = applicant_income+co_applicant_income
     dependents = int_features[6]
     property_area = int_features[7]
-    
-    loan_amount = np.log(loan_amount)
-    
     
 
     final_features = np.array([applicant_income,co_applicant_income,
                                 loan_amount,term,credit_history,education,
-                                total_income,dependents,property_area])
+                                dependents,property_area])
     
     x_final = scale.transform(final_features.reshape(1,-1))
     
