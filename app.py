@@ -3,7 +3,7 @@ from flask import Flask, request, jsonify, render_template
 import pickle
 
 app = Flask(__name__)
-model = pickle.load(open('stack_model.pkl', 'rb'))
+model = pickle.load(open('ran_model.pkl', 'rb'))
 scale = pickle.load(open('scale.pkl', 'rb'))
 
 @app.route('/')
