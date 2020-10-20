@@ -21,14 +21,17 @@ def predict():
     loan_amount = int_features[2]/10000
     term = int_features[3]
     credit_history = int_features[4]
-    education = int_features[5]
-    dependents = int_features[6]
-    property_area = int_features[7]
+    gender = int_features[5]
+    education = int_features[6]
+    marriage = int_features[7]
+    self_employeed = int_features[8]
+    dependents = int_features[9]
+    property_area = int_features[10]
     
 
-    final_features = np.array([applicant_income,co_applicant_income,
-                                loan_amount,term,credit_history,education,
-                                dependents,property_area])
+    final_features = np.array([dependents,education,applicant_income,co_applicant_income,
+                                loan_amount,term,credit_history,property_area,gender,marriage,
+                                self_employeed])
     
     x_final = scale.transform(final_features.reshape(1,-1))
     
