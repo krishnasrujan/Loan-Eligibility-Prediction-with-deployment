@@ -68,12 +68,15 @@ I have tested the metrics using various algorithms. I have also used voting clas
 Below is the feature importance graph of random forest, xgboost, logistic regression models which i have used in stacked classifier.
 
 Random Forest Classifier
+
 <img width="609" alt="ran_fi_le" src="https://user-images.githubusercontent.com/48923446/96589989-18647b00-1303-11eb-908f-646d444d96ba.PNG">
 
 XGBoost Classifier
+
 <img width="607" alt="xgb_fi_le" src="https://user-images.githubusercontent.com/48923446/96589999-1ac6d500-1303-11eb-8d2d-8258ef1aa442.PNG">
 
 Logistic Regression
+
 <img width="435" alt="log fi" src="https://user-images.githubusercontent.com/48923446/96590018-21554c80-1303-11eb-96d3-bf6efadf29f1.PNG">
 
 
