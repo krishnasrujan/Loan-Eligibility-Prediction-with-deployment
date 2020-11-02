@@ -4,7 +4,7 @@ import pickle
 
 app = Flask(__name__)
 model = pickle.load(open('ran_model.pkl', 'rb'))
-scale = pickle.load(open('scale.pkl', 'rb'))
+#scale = pickle.load(open('scale.pkl', 'rb'))
 
 @app.route('/')
 def home():
@@ -33,7 +33,7 @@ def predict():
                                 loan_amount,term,credit_history,property_area,gender,marriage,
                                 self_employeed])
     
-    x_final = scale.transform(final_features.reshape(1,-1))
+    x_final = final_features.reshape(1,-1)
     
     prediction = model.predict(x_final)
 
