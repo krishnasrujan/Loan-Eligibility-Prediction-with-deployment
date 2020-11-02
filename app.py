@@ -4,7 +4,6 @@ import pickle
 
 app = Flask(__name__)
 model = pickle.load(open('ran_model.pkl', 'rb'))
-#scale = pickle.load(open('scale.pkl', 'rb'))
 
 @app.route('/')
 def home():
